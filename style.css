@@ -311,10 +311,12 @@ img {
 /* =========================================================
    SERVICES (Grid adjustments)
 ========================================================= */
+/* ===== SERVICES SECTION ===== */
 .services-section {
   padding: 5.625rem 0 4.375rem;
   color: #173c2b;
 }
+
 .heading {
   max-width: 46.875rem;
   margin: auto;
@@ -322,12 +324,14 @@ img {
   margin-bottom: 3.4375rem;
   padding: 0 1rem;
 }
+
 .sub-title {
   color: #c1953b;
   font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 1px;
 }
+
 .heading h2 {
   font-size: 2rem;
   margin: 0.75rem 0;
@@ -338,43 +342,55 @@ img {
   color: #48544e;
 }
 
+/* ===== FLEX CARDS ===== */
 .services-grid {
   width: 92%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Changed to 4 columns on desktop */
+  display: flex;
+  flex-wrap: wrap;
   gap: 1.75rem;
+  justify-content: space-between;
 }
 
+/* NORMAL CARD */
 .card {
   background: #fff;
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   transition: 0.4s;
+  flex: 1 1 calc(25% - 1.75rem); /* 4 per row desktop */
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
+
 .card img {
   width: 100%;
   height: 12.1875rem;
   object-fit: cover;
 }
+
 .card-body {
   padding: 1.375rem;
+  flex-grow: 1;
 }
+
 .card-body h3 {
   font-size: 1.125rem;
   margin: 0.5rem 0;
   font-weight: 700;
 }
+
 .card-body p {
   font-size: 0.875rem;
   line-height: 1.42;
   color: #48544e;
 }
+
 .icon {
   font-size: 1.4375rem;
 }
@@ -382,19 +398,18 @@ img {
 .learn {
   font-weight: 600;
   color: #173c2b;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 .learn:hover {
   color: #c1953b;
 }
 
-/* ===== Canva Style Emergency Card (No Image) ===== */
+/* ===== EMERGENCY CARD (NO IMG) ===== */
 .card-wide.no-img {
   display: flex;
-  grid-column: span 4;
+  flex: 1 1 100%;
   background: linear-gradient(135deg, #124733, #0d3a2a);
   border-radius: 12px;
-  height: auto;
   padding: 0;
   overflow: hidden;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
@@ -467,7 +482,20 @@ img {
   transform: translateY(-2px);
 }
 
-@media (max-width: 650px) {
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* TABLET — 2 cards per row */
+@media (max-width: 991px) {
+  .card {
+    flex: 1 1 calc(50% - 1.75rem);
+  }
+}
+
+/* MOBILE — 1 card per row */
+@media (max-width: 560px) {
+  .card {
+    flex: 1 1 100%;
+  }
   .wide-body {
     text-align: center;
     padding: 2.3rem 1.5rem;
@@ -476,7 +504,7 @@ img {
     margin: 0 auto 1.4rem;
   }
   .call-btn {
-    margin: 0 auto;
+    margin: auto;
   }
 }
 

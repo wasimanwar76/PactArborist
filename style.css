@@ -850,3 +850,81 @@ img {
   }
 }
 
+
+/* LinkedIn Footer Badge */
+.linkedin-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #dfece6;
+  transition: 0.3s;
+}
+
+.linkedin-badge img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.linkedin-badge:hover img {
+  transform: scale(1.08);
+}
+
+.linkedin-badge:hover span {
+  color: #0a66c2;
+}
+
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.footer-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.linkedin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #dfece6;
+  transition: .3s;
+}
+
+.linkedin-badge img {
+  width: 20px;
+  height: 20px;
+}
+
+.linkedin-badge:hover {
+  color: #edd296;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 650px) {
+  .footer-brand {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-logo {
+    margin-bottom: 6px;
+  }
+  .linkedin-badge {
+    justify-content: center;
+  }
+}
+

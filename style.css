@@ -936,3 +936,13 @@ img {
   line-height: 1.45;
 }
 
+.footer-col p a {
+  color: #dfece6;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer-col p a:hover {
+  color: #edd296;
+}
+
+

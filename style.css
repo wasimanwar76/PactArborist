@@ -928,3 +928,11 @@ img {
   }
 }
 
+.footer-col p b {
+  color: #edd296;
+}
+.footer-col p {
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
